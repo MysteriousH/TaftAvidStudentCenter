@@ -1,0 +1,269 @@
+/*Background color and smooth scrolling*/
+html {
+  background-image: linear-gradient(to right top, #add8e6 0%, #022788 100%);
+  scroll-behavior: smooth;
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 12px
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px grey;
+  border-radius: 50px;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5cacee;
+}
+
+/* Custom Cursor-------------------------------------------------------------------------------------------------------*/
+img.logo {
+  cursor: url('https://cdn.glitch.com/17ed0e8d-976c-4e80-a835-dc0d2d9f656e%2F5a7c3d2fd585-T_logo_Blue-1.png?v=1573314662392');
+ 
+}
+
+/*slideshow---------------------------------------------------------------------------------------*/
+
+body {
+  margin: 0;
+}
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+* {
+  box-sizing: border-box;
+}
+figure { 
+  margin: 0; background: #101010;
+  font-family: Istok Web, sans-serif;
+  font-weight: 100;
+}
+div#taftavidgallery { 
+  width: 100%; overflow: hidden; 
+}
+figure.slides { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite; 
+}
+figure.slides figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+figure.slides img { width: 100%; height: auto; }
+figure.slides figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 2rem; padding: .6rem; 
+   text-align: center;
+}
+
+
+/*navigation bar------------------------------------------------------------------------------------*/
+.navbar {
+  max-width: 960px;
+  mask-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    /*navigation bar size*/ #ffffff 25%,
+    #ffffff 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.navscroll {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px;
+  position: fixed; /*the sticky navigation bar that will follow you*/
+  z-index: 1;
+  top: 0;
+  text-align: center;
+  justify-content: center;
+}
+.navbar ul {
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 25%,
+    rgba(255, 255, 255, 0.2) 75%,
+    /*navigation bar design*/ rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 25px rgb(0, 0, 0, 0.1), inset 0 0 -5px rgb(255, 255, 255, 0.6);
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li a {
+  padding: 20px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgb(238, 238, 238);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  box-shadow: 0 0 50px rgb(0, 35, 122),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgb(238, 238, 238); /*navigation bar texture when hover over*/
+  transition: 0.6s;
+  color: rgba(0, 35, 122, 0.7);
+}
+
+
+hr.fancyline {
+  height: 12px; /*textured horizontal line #1 (the shadowy one)*/
+  border: 0;
+  box-shadow: inset 0 15px 15px -15px rgba(0, 0, 0, 5);
+}
+
+hr.fancyline1 {
+  border: 0; /*textured horizonal line #2 (the line that doesn't go across the page)*/
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+
+
+.click {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+#glow {
+  text-shadow: #ffff 1px 0 20px;
+}
+
+iframe.form {
+  background: rgb(66,133,244); 
+   box-shadow: 0 0 60px rgb(31,31,31);
+  border-radius: 5%;
+}
+
+
+
+
+iframe.form1 {
+  background: rgb(103,58,183); 
+   box-shadow: 0 0 60px rgb(54,57,63);
+  border-radius: 5%;
+}
+
+.alert {
+  text-shadow: #ffff 1px 0 30px;
+}
+
+/*social media -----------------------------------------------------------------------------------------------------*/
+
+#social {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.circle-size { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border:2px solid; /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+
+/* facebook button class*/
+.facebook{
+    background: #4060A5;
+}
+
+.facebook:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebook:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+  
+}
+
+/* twitter button class*/
+.twitter{
+    background: #00ABE3;
+}
+
+.twitter:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+      
+}
+
+.twitter:hover{
+      color: #00ABE3;
+      background: #fff;
+      border-color: #00ABE3;
+ 
+}
+
+/* instagram plus button class*/
+.instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+
+.instagram:before{
+      font-family: "FontAwesome";
+      content: "\f16d"; /* add instagram icon */
+}
+
+.instagram:hover{
+      color: #d6249f;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+      border-color: #d6249f;
+ 
+    
+
+p.para1about {
+  text-align: left;
+}
+  
+  
